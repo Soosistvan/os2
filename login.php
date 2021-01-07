@@ -31,6 +31,7 @@ function connect_to_mysqli()
     if (!$connect) {
         die("Connection failed mysql: " . mysqli_connect_error());
     }
+    
     $connect->set_charset("utf8");
     return $connect;
 }
