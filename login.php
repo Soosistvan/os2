@@ -25,11 +25,15 @@ function checkRecaptcha($token)
     return $responseKeys["success"];
 }
 
+private $dbservername = "n2o93bb1bwmn0zle.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";
+private $dbusername = "sedkaiiqoy5hmu79";
+private $dbpassword = "pxepxtotl1m5ghqg";
+private $dbname = "ciomqtae65mm5mqp";
 function connect_to_mysqli()
 {
-    $connect = mysqli_connect("n2o93bb1bwmn0zle.chr7pe7iynqr.eu-west-1.rds.amazonaws.com", "sedkaiiqoy5hmu79", "pxepxtotl1m5ghqg", "ciomqtae65mm5mqp");
-    if (!$connect) {
-        die("Connection failed mysql: " . mysqli_connect_error());
+    $conn = new mysqli($this->dbservername, $this->dbusername, $this->dbpassword, $this->dbname);
+    if (!$conn->connect_error) {
+        die("Connection failed mysql: " . $conn->connect_error);
     }
     
     $connect->set_charset("utf8");
