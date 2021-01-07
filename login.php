@@ -27,7 +27,7 @@ function checkRecaptcha($token)
 
 function connect_to_mysqli()
 {
-    $connect = mysqli_connect("eu-cdbr-west-03.cleardb.net", "b2f48905b8d51f", "d2c81bd4", "heroku_df0ca9583326004");
+    $connect = mysqli_connect("n2o93bb1bwmn0zle.chr7pe7iynqr.eu-west-1.rds.amazonaws.com", "sedkaiiqoy5hmu79", "pxepxtotl1m5ghqg", "ciomqtae65mm5mqp");
     if (!$connect) {
         die("Connection failed mysql: " . mysqli_connect_error());
     }
