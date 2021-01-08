@@ -26,7 +26,7 @@ if(!isset($_SESSION["felhasznalonev"])) {
 <div class="container">
 <?php
 function connect_to_mysqli(){
-	$connect = mysqli_connect("localhost", "root", "root", "barlang");
+	$connect = mysqli_connect("eu-cdbr-west-03.cleardb.net", "b2f48905b8d51f", "d2c81bd4", "heroku_df0ca9583326004");
 	if (!$connect) {
 		  die("Connection failed mysql: " . mysqli_connect_error());
 	}
