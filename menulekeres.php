@@ -26,7 +26,7 @@ INSERT INTO `menu` (description, href) VALUES ('Törlés', 'torles.php');
 INSERT INTO `menu` (description, href) VALUES ('Módosítás', 'modositas.php');
 CREATE TABLE `barlang`.`barlang` ( `id` INT AUTO_INCREMENT PRIMARY KEY , `nev` VARCHAR(128) NOT NULL , `hossz` INT NOT NULL , `kiterjedes` INT NOT NULL , `melyseg` INT NOT NULL , `magassag` INT NOT NULL , `telepules` VARCHAR(128) NOT NULL , `fenykep` VARCHAR(128) NOT NULL ) ENGINE = MyISAM
 */
-$conn = mysqli_connect("localhost", "root", "root", "barlang") or die("Connect hiba: ".mysqli_connect_error());
+$conn = mysqli_connect("eu-cdbr-west-03.cleardb.net", "b2f48905b8d51f", "d2c81bd4", "heroku_df0ca9583326004") or die("Connect hiba: ".mysqli_connect_error());
 $conn->set_charset("utf8");
 $query = "SELECT * FROM menu";
 $result = mysqli_query($conn, $query);
